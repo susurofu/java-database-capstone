@@ -1,3 +1,5 @@
+## Patient User Stories
+
 **Title:**
 _As a patient, I want to view a list of doctors without logging in, so that I can explore options before registering._
 
@@ -36,18 +38,7 @@ _As a patient, I want to log in and book an hour-long appointment, so that I can
 **Story Points:** none
 **Notes:** none
 
-**Title:**
-_As a patient, I want to log in and book an hour-long appointment, so that I can consult with a doctor._
 
-**Acceptance Criteria:**
-1. After logging in the service of appointment scheduling is available.
-2. The list of available time slots is displayed.
-3. The user cannot book the appointment if the slot is occupied by other patient.
-
-
-**Priority:** High
-**Story Points:** none
-**Notes:** none
 
 **Title:**
 _As a patient, I want to log in , so that I can manage my appointments._
@@ -75,6 +66,8 @@ _As a patient, I want to log out of the portal, so that I can secure my account.
 
 
 
+## Doctor User Stories
+
 **Title:**
 _As a doctor, I want to log in, so that I can manage my appointments._
 
@@ -99,17 +92,7 @@ _As a doctor, I want to view my appointment calendar, so that I can stay organiz
 _As a doctor, I want to update my profile with specialization and contact information, so that I can stay patients have up-to-date information._
 
 **Acceptance Criteria:**
-1. At the portal after log-in, a doctor can find a service for info update where they can modify specializtion and contact info..
-
-**Priority:** Low
-**Story Points:** none
-**Notes:** none
-
-**Title:**
-_As a doctor, I want to update my profile with specialization and contact information, so that I can stay patients have up-to-date information._
-
-**Acceptance Criteria:**
-1. At the portal after log-in, a doctor can find a service for info update where they can modify specializtion and contact info..
+1. At the portal after log-in, a doctor can find a service for info update where they can modify specializtion and contact info.
 
 **Priority:** Low
 **Story Points:** none
@@ -141,3 +124,65 @@ _As a doctor, I want to mark your unavailability to inform patients, so that the
 **Story Points:** none
 **Notes:** none
 
+## Admin User Stories
+
+**Title:**
+_As a admin, I want to log in, so that I can use the system._
+
+**Acceptance Criteria:**
+1. After log in, the admin have the access to the interface of the system.
+
+
+
+**Priority:** High
+**Story Points:** none
+**Notes:** none
+
+
+**Title:**
+_As a admin, I want to log out, so that I can ensure security._
+
+1. After log out, no services are available
+2. After log out, a user needs to log in again to start using the portal again.
+
+
+
+**Priority:** High
+**Story Points:** none
+**Notes:** none
+
+**Title:**
+_As a admin, I want to manage patients' appointments, so that I can do manual changes if necessary._
+
+1. Admin can edit, add, and remove appointments for users.
+2. Tha appointment data is updated for all related users
+
+
+
+**Priority:** High
+**Story Points:** none
+**Notes:** none
+
+**Title:**
+_As a admin, I want to manage doctors' appointments, so that I can do manual changes if necessary._
+
+1. Admin can edit, add, and remove appointments for doctors.
+2. Tha appointment data is updated for all related users
+
+
+
+**Priority:** High
+**Story Points:** none
+**Notes:** none
+
+**Title:**
+_As a admin, I want to get the accumulitative calendar of all doctors appointments, so that I can consult patient who make appointments by phone._
+
+1. The system displays all available and occupied appointment dates and time for all doctors.
+2. Admin can choose the scope of dates and doctors to get appointments data.
+
+
+
+**Priority:** Medium
+**Story Points:** none
+**Notes:** none
