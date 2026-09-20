@@ -38,8 +38,8 @@ public class PrescriptionService {
              * for this appointment.
              */
             List<Prescription> existingPrescriptions =
-                    prescriptionRepository.findByAppointmentId(
-                            prescription.getAppointmentId()
+                    prescriptionRepository.findByAppointmentID(
+                            prescription.getAppointmentID()
                     );
 
             if (existingPrescriptions != null
@@ -93,7 +93,7 @@ public class PrescriptionService {
         try {
 
             List<Prescription> prescriptions =
-                    prescriptionRepository.findByAppointmentId(
+                    prescriptionRepository.findByAppointmentID(
                             appointmentId
                     );
 

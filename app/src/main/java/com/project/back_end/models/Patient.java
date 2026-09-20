@@ -65,6 +65,7 @@ private String email;
 //      - The @Size(min = 6) annotation ensures that the password must be at least 6 characters long.
 @NotNull
 @Size(min = 6)
+@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 private String password;
 
 // 5. 'phone' field:

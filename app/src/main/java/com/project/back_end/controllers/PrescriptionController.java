@@ -60,7 +60,7 @@ public class PrescriptionController {
         if (result.getStatusCode().is2xxSuccessful()) {
 
             appointmentService.changeStatus(
-                    prescription.getAppointmentId(),
+                    prescription.getAppointmentID(),
                     1
             );
         }

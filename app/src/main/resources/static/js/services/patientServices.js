@@ -107,7 +107,7 @@ export async function getPatientAppointments(id, token, user) {
     try {
         // Dynamic endpoint based on patient ID and user role
         const response = await fetch(
-            `${PATIENT_API}/${id}/${user}/${token}`,
+            `${PATIENT_API}/${id}/${token}`,
             {
                 method: "GET"
             }

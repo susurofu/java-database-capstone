@@ -167,13 +167,16 @@ public class Service {
     ) {
 
         boolean hasName =
-                name != null && !name.trim().isEmpty();
+                name != null && !name.trim().isEmpty()
+                        && !name.equalsIgnoreCase("null");
 
         boolean hasSpecialty =
-                specialty != null && !specialty.trim().isEmpty();
+                specialty != null && !specialty.trim().isEmpty()
+                        && !specialty.equalsIgnoreCase("null");
 
         boolean hasTime =
-                time != null && !time.trim().isEmpty();
+                time != null && !time.trim().isEmpty()
+                        && !time.equalsIgnoreCase("null");
 
         /*
          * name + specialty + time
@@ -317,7 +320,7 @@ public class Service {
             try {
 
                 LocalTime availableTime =
-                        LocalTime.parse(slot);
+                        LocalTime.parse(slot.split("-")[0]);
 
                 if (availableTime.equals(requestedTime)) {
                     return 1;

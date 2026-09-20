@@ -219,7 +219,9 @@ public class AppointmentService {
          * Rename this line if your TokenService uses a
          * different method name.
          */
-        Long patientId = tokenService.getUserIdFromToken(token);
+        String patientEmail = tokenService.extractIdentifier(token);
+        Patient patient = patientRepository.findByEmail(patientEmail);
+        Long patientId = patient != null ? patient.getId() : null;
 
         if (patientId == null) {
             response.put("message", "Invalid token.");
@@ -286,7 +288,9 @@ public class AppointmentService {
          * Rename this call if your TokenService uses
          * another method name.
          */
-        Long doctorId = tokenService.getUserIdFromToken(token);
+        String doctorEmail = tokenService.extractIdentifier(token);
+        Doctor doctor = doctorRepository.findByEmail(doctorEmail);
+        Long doctorId = doctor != null ? doctor.getId() : null;
 
         if (doctorId == null) {
             response.put("message", "Invalid token.");
@@ -303,7 +307,8 @@ public class AppointmentService {
 
         List<Appointment> appointments;
 
-        if (pname != null && !pname.trim().isEmpty()) {
+        if (pname != null && !pname.trim().isEmpty()
+                && !pname.equalsIgnoreCase("null")) {
 
             appointments =
                     appointmentRepository

@@ -141,7 +141,7 @@ public class DoctorService {
      */
     @Transactional(readOnly = true)
     public List<Doctor> getDoctors() {
-        return doctorRepository.findAll();
+        return doctorRepository.findAllWithAvailableTimes();
     }
 
     /*
@@ -389,7 +389,7 @@ public class DoctorService {
 
                                 try {
                                     LocalTime time =
-                                            LocalTime.parse(slot);
+                                            LocalTime.parse(slot.split("-")[0]);
 
                                     if (searchAM) {
                                         return time.isBefore(

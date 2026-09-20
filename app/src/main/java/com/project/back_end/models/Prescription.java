@@ -1,7 +1,8 @@
 package com.project.back_end.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import org.springframework.data.annotation.Id;
 import jakarta.validation.constraints.NotNull;
@@ -41,6 +42,8 @@ public class Prescription {
 //      - Represents the ID of the associated appointment where the prescription was given.
 //      - The @NotNull annotation ensures that the appointment ID is required for the prescription.
   @NotNull
+  @Field("appointmentId")
+  @JsonAlias("appointmentId")
   private Long appointmentID;
 
 // 4. 'medication' field:
