@@ -74,6 +74,7 @@ public Long getId(){
     return this.id;
 }
 
+@JsonProperty("username")
 public void setUserName(String name){
     this.username = name;
 }

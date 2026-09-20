@@ -18,8 +18,8 @@ const DOCTOR_API = API_BASE_URL + '/doctor/login';
  */
 window.onload = function () {
 
-    const adminBtn = document.getElementById('adminLogin');
-    const doctorBtn = document.getElementById('doctorLogin');
+    const adminBtn = document.getElementById('admin');
+    const doctorBtn = document.getElementById('doctor');
 
     // Open Admin login modal
     if (adminBtn) {
