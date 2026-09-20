@@ -12,19 +12,18 @@ import { createDoctorCard } from "./components/doctorCard.js";
 /*
  * Open the Add Doctor modal
  */
-const addDoctorBtn = document.getElementById("addDocBtn");
-
-if (addDoctorBtn) {
-    addDoctorBtn.addEventListener("click", () => {
-        openModal("addDoctor");
-    });
-}
-
-
 /*
  * Load doctors when the page is ready
  */
 document.addEventListener("DOMContentLoaded", () => {
+    const addDoctorBtn = document.getElementById("addDocBtn");
+
+    if (addDoctorBtn) {
+        addDoctorBtn.addEventListener("click", () => {
+            openModal("addDoctor");
+        });
+    }
+
     loadDoctorCards();
 
     const searchBar = document.getElementById("searchBar");
